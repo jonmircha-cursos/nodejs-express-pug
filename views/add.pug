@@ -1,0 +1,10 @@
+extends layout 
+
+block content 
+  main.container 
+    h1= title
+    form(action="/add" method="POST")
+      label(for="title") Título de la tarea
+      input(type="text" name="title" id="title" required)
+      button.add-button(type="submit") Agregar 
+    a.back-button(href="/") 🏠 Volver
